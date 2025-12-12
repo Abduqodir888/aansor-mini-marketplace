@@ -32,5 +32,11 @@ npm run build
 - Что было сложным: аккуратно развести каталожную часть на чистом JS и корзину на React, при этом синхронизировать их через события и не потерять состояние в localStorage.
 
 ![Главный экран](public/screens/main.png)
+
+
+
 ![Хавер продукта](public/screens/product_hover.png)
+
+
+
 ![Корзина](public/screens/cart.png)
