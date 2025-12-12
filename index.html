@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Marketplace</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="page__header">
+        <p class="eyebrow">Mini Marketplace</p>
+        <h1>Curated picks from Fake Store</h1>
+        <p class="lede">
+          Browse products on the left (vanilla JS) and manage your cart on the right (React).
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="panel">
+          <div class="panel__title-row">
+            <h2>Products</h2>
+          </div>
+          <div id="product-grid" class="product-grid" aria-live="polite"></div>
+          <p id="product-status" class="muted"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel__title-row">
+            <h2>Cart</h2>
+            <span class="muted" id="cart-meta"></span>
+          </div>
+          <div id="cart-root"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

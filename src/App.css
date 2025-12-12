@@ -1,0 +1,134 @@
+.cart-shell {
+  display: grid;
+  gap: 12px;
+}
+
+.cart-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.summary-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.summary-value {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cart-item__media {
+  width: 76px;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-item__media img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.cart-item__body {
+  display: grid;
+  gap: 6px;
+}
+
+.cart-item__title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.cart-item__price {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cart-item__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cart-item__total {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.quantity__value {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pill {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.empty-state {
+  padding: 16px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 540px) {
+  .cart-item {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'image title'
+      'image total';
+    row-gap: 10px;
+  }
+
+  .cart-item__total {
+    grid-area: total;
+    justify-self: end;
+  }
+}
